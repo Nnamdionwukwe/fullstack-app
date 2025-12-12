@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "server/api/index.cjs",
+      "src": "server/api/index.js",
       "use": "@vercel/node"
     },
     {
@@ -16,7 +16,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server/api/index.cjs",
+      "dest": "/server/api/index.js",
       "headers": {
         "Access-Control-Allow-Origin": "http://localhost:5173",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE",
