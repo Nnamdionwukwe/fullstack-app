@@ -9,7 +9,7 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173", // Your local frontend URL
   "http://localhost:3000", // Common alternative local frontend URL
-  "https://fullstack-app-wddq.vercel.app", // Your deployed frontend URL
+  "https://fullstack-app-ueic.vercel.app", // Your deployed frontend URL
 ];
 
 const corsOptions = {
