@@ -8,7 +8,7 @@ function App() {
 
   // Define the base URL of your deployed Vercel backend
   // !!! IMPORTANT: REPLACE THIS WITH YOUR ACTUAL DOMAIN !!!
-  const API_BASE_URL = 'https://YOUR_VERCEL_DOMAIN_HERE.vercel.app'; 
+  const API_BASE_URL = 'https://fullstack-app-wddq.vercel.app'; 
 
   useEffect(() => {
     const fetchProducts = async () => {
