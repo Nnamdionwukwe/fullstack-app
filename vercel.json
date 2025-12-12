@@ -16,7 +16,12 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server/api/index.cjs"
+      "dest": "/server/api/index.cjs",
+      "headers": {
+        "Access-Control-Allow-Origin": "http://localhost:5173",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE",
+        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+      }
     },
     {
       "src": "/(.*)",

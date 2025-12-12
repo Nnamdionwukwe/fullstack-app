@@ -1,5 +1,5 @@
-import React, { useEffect, useState } = 'react';
-import './App.css'; 
+import React, { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -8,21 +8,21 @@ function App() {
 
   // Define the base URL of your deployed Vercel backend
   // !!! IMPORTANT: REPLACE THIS WITH YOUR ACTUAL DOMAIN !!!
-  const API_BASE_URL = 'https://fullstack-app-wddq.vercel.app'; 
+  const API_BASE_URL = "https://fullstack-app-wddq.vercel.app";
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         // Fetch directly from the live backend API endpoint
-        const response = await fetch(`${API_BASE_URL}/api/products`); 
+        const response = await fetch(`${API_BASE_URL}/api/products`);
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
-        setProducts(data); 
-        setLoading(false); 
+        setProducts(data);
+        setLoading(false);
       } catch (err) {
         console.error("Error fetching products:", err);
         setError(err.message);
