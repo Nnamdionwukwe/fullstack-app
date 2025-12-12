@@ -13,7 +13,7 @@ function App() {
     const fetchProducts = async () => {
       try {
         // Fetch from the new endpoint we created in the backend
-        const response = await fetch("http://localhost:5000/api/products");
+        const response = await fetch("/api/products");
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
