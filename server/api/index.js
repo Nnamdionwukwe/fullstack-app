@@ -5,8 +5,27 @@ const cors = require("cors");
 
 const app = express();
 
+// Define allowed origins
+const allowedOrigins = [
+  "http://localhost:5173", // Your local frontend URL
+  "http://localhost:3000", // Common alternative local frontend URL
+  "https://fullstack-app-wddq.vercel.app", // Your deployed frontend URL
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Check if the requesting origin is in the allowed list
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  optionsSuccessStatus: 200, // Some older browsers choke on 204
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // --- In-Memory Product Data ---
