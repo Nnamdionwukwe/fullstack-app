@@ -5,8 +5,7 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const API_URL =
-    "https://mall-ecommerce-api-production.up.railway.app/api/products";
+  const API_URL = "/api/products";
 
   useEffect(() => {
     // Define an async function inside useEffect
